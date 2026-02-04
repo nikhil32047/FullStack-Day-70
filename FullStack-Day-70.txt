@@ -1,0 +1,119 @@
+Day 70:
+==========
+
+Non-Primitive Data Types in JavaScript
+=============================================
+Non-primitive data types store multiple values and are reference types.
+
+👉 When copied, reference is shared, not the actual value.
+
+1) Array Data Type
+=======================
+Used to store multiple values in a single variable
+
+Values can be of different data types
+
+Index starts from 0
+
+Syntax:
+
+let arr = [10, "JS", true, 25.5];
+
+Example:
+
+let languages = ["HTML", "CSS", "JavaScript"];
+
+console.log(languages[0]); // HTML
+console.log(languages.length); // 3
+
+
+Common Array Methods:
+=========================
+push()     // add at end
+pop()      // remove from end
+shift()    // remove from start
+unshift()  // add at start
+
+typeof languages; // "object"
+
+✔ Arrays are mutable
+✔ Stored in heap memory
+
+2) Object Data Type
+=======================
+Used to store data in key : value pairs
+
+Keys are called properties
+
+Functions inside objects are called methods
+
+Syntax:
+
+let student = {
+  name: "Nikhil",
+  age: 22,
+  course: "Full Stack"
+};
+
+
+Accessing Object Data:
+===========================
+console.log(student.name);      // Dot notation
+console.log(student["age"]);    // Bracket notation
+
+
+Adding New Property:
+
+student.city = "Hyderabad";
+
+typeof student; // "object"
+
+
+✔ Objects are the backbone of JavaScript
+
+3) Regex Object Data Type (Regular Expression)
+=====================================================
+Used for pattern matching
+
+Commonly used in form validation, search, and text processing
+
+Creating Regex Object:
+
+Using Literal:
+
+let pattern = /abc/;
+
+
+Using Constructor:
+=======================
+let pattern = new RegExp("abc");
+
+
+Example:
+
+let text = "Welcome to JavaScript";
+let result = /Java/.test(text);
+
+console.log(result); // true
+
+Common Regex Methods:
+
+test()   // returns true or false
+match()
+search()
+replace()
+
+typeof pattern; // "object"
+
+
+✔ Regex is case-sensitive by default
+
+Key Differences (Primitive vs Non-Primitive)
+Feature	Primitive	Non-Primitive
+Stores	Single value	Multiple values
+Memory	Stack	Heap
+Copy	By value	By reference
+Mutable	❌ No	✅ Yes
+Interview One-Liner 💡
+
+Non-primitive data types store reference addresses and allow dynamic data manipulation.
